@@ -48,3 +48,9 @@ img{
         margin-top: 5px;
     }
 }
+@media(max-width:900px){
+    #footer{
+        position: relative;
+        top: 700px;
+    }
+}

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import ProfileUser from '../../components/Profile'
 import "./style.scss";
 import axios from 'axios';
+import { NavLink } from 'react-router-dom';
 const index = () => {
       const [total, setTotal] = useState(6);
       const [totalIndex, setTotalIndex] = useState(1);
@@ -42,12 +43,12 @@ const index = () => {
                                     users.length > 0 ? sliceApi.map((item, index) => {
                                           return (
                                                 <div key={index} className="card" id='card'>
-                                                      <div id='fir' className="first d-flex justify-content-between align-items-center mt-2"><a style={{ textDecoration: "none" }} href={item.html_url}>{item.name}</a> <button id='pub'>Public</button></div>
+                                                      <div id='fir' className="first d-flex justify-content-between align-items-center mt-2"><NavLink style={{ textDecoration: "none" }} href={item.html_url}>{item.name}</NavLink> <button id='pub'>Public</button></div>
                                                       <div className="fordes w-100">
                                                             <p className='mx-3'>{item.description}</p>
                                                       </div>
                                                       <div className="forlan mx-5">
-                                                            {item.language == "CSS" ? <p className='mx-3'><div className='nal'></div> CSS</p> : <p className='mx-3'><div className='dum'></div> Javascript</p>}
+                                                      <p className='mx-3'>{item.language}<div className={item.language}></div></p>
                                                       </div>
                                                 </div>
                                           )

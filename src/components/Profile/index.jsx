@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from 'axios';
+import { NavLink } from "react-router-dom";
 const index = ()=>{
     const [info, setInfo]= useState([])
 
@@ -17,7 +18,7 @@ const index = ()=>{
              {
                         info.map((item, index)=>{
                             return(
-                              <div className='mt-2 mx-2'>
+                              <div className='mt-2 mx-2' id="all">
                               <div className="foravatar">
                                     <img className='avatar' src={item.avatar_url} alt="Url" />
                               </div>
@@ -37,8 +38,10 @@ const index = ()=>{
                                     <div className="btns mx-5">
                                      <button className='edit-p'>Edit Profile</button>
                                     </div>
-                                    <p className='mx-5'>{item.followers} followers : {item.following}following</p>
-
+                                    <div className="ali">
+                                    <NavLink style={{textDecoration:"none"}} to={"followers"}  className='mx-5'>{item.followers} followers</NavLink>
+                                    <NavLink style={{textDecoration:"none"}} to={"following"} className='mx-5'>{item.following} following</NavLink>
+                                    </div>
                                     <ul className='mx-3'>
                                           <li className='lchalar'>{item.company}</li>
                                           <li className='lchalar'>{item.location}</li>
