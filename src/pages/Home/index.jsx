@@ -18,6 +18,7 @@ const index = () => {
                   setLoading(false)
             }
       }
+      
       useEffect(() => {
             res()
       }, [])

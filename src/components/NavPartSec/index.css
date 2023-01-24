@@ -23,6 +23,11 @@ li{
         width: 80%;    
     }
 }
+@media(max-width:500px){
+    .maincha{
+        width: 100%;
+    }
+}
 
 .res{
     margin-bottom: 2px solid red;
