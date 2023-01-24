@@ -1,0 +1,8 @@
+.ali{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.followchalar{
+    color: rgb(46, 46, 46);
+}

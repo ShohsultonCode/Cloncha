@@ -10,14 +10,23 @@ const index = () => {
       const lastOperator = firstOperator - total;
       const [users, setUsers] = useState([]);
       const pushArray = [];
+      const [load, setLoading] = useState(true)
       const res = async () => {
             const res = await axios.get('https://api.github.com/users/ShohsultonCode/repos')
             setUsers(res.data)
+            if (res.data) {
+                  setLoading(false)
+            }
       }
       useEffect(() => {
             res()
       }, [])
-
+      
+      if (load) {
+            return(
+               <h2 className='load'>Loaing...</h2>
+            )
+         }
       const sliceApi = users.slice(lastOperator, firstOperator);
       for (let i = 1; i <= Math.floor(users.length / total); i++) {
             pushArray.push(i)
@@ -43,7 +52,7 @@ const index = () => {
                                     users.length > 0 ? sliceApi.map((item, index) => {
                                           return (
                                                 <div key={index} className="card" id='card'>
-                                                      <div id='fir' className="first d-flex justify-content-between align-items-center mt-2"><NavLink style={{ textDecoration: "none" }} href={item.html_url}>{item.name}</NavLink> <button id='pub'>Public</button></div>
+                                                      <div id='fir' className="first d-flex justify-content-between align-items-center mt-2"><a style={{ textDecoration: "none" }} href={item.html_url}>{item.name}</a> <button id='pub'>Public</button></div>
                                                       <div className="fordes w-100">
                                                             <p className='mx-3'>{item.description}</p>
                                                       </div>

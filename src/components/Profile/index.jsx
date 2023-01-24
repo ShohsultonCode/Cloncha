@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from 'axios';
 import { NavLink } from "react-router-dom";
+import './index.css'
 const index = ()=>{
     const [info, setInfo]= useState([])
 
@@ -39,8 +40,8 @@ const index = ()=>{
                                      <button className='edit-p'>Edit Profile</button>
                                     </div>
                                     <div className="ali">
-                                    <NavLink style={{textDecoration:"none"}} to={"followers"}  className='mx-5'>{item.followers} followers</NavLink>
-                                    <NavLink style={{textDecoration:"none"}} to={"following"} className='mx-5'>{item.following} following</NavLink>
+                                    <NavLink style={{textDecoration:"none"}} className="followchalar" to="/followers">{item.followers} followers</NavLink>
+                                    <NavLink style={{textDecoration:"none"}} className="followchalar" to="/following">{item.following} following</NavLink>
                                     </div>
                                     <ul className='mx-3'>
                                           <li className='lchalar'>{item.company}</li>
