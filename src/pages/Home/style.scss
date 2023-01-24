@@ -276,6 +276,28 @@
     }
     
 }
+@media(max-width:650px){
+    .userm{
+        position: relative;
+        left: -28px;
+    }
+    .forbio{
+        width: 100%;
+        position: relative;
+        left: 12px;
+    }
+    .btns{
+        left: -5px;
+        position: relative;
+    }
+    .forbio>p{
+        text-align: center;
+        font-size: 18px;
+    }   
+    .btns>button{
+        margin-left: 10px;
+    }
+}
 .load{
     position: absolute;
     top: 300px;
