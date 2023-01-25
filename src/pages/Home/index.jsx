@@ -72,6 +72,7 @@ const index = () => {
                                           key={index}
                                           className="pinnedCard-btnGroup__btn btn btn-primary"
                                           type="button"
+                                          id='slr'
                                           onClick={() => ClickedBtn(item)}
                                     >
                                           {item}

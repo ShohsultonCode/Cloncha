@@ -68,7 +68,6 @@ const index = () => {
                   loading="lazy"
                />
                <a
-                  className="dropdown-toggle d-flex align-items-center hidden-arrow"
                   href="#"
                   id="navbarDropdownMenuAvatar"
                   role="button"

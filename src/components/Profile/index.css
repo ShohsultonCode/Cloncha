@@ -6,3 +6,20 @@
 .followchalar{
     color: rgb(46, 46, 46);
 }
+.stw{
+    color: rgb(192, 192, 192);
+    font-weight: 300;
+}
+@media(max-width:1270px){
+    .avatar{
+        width: 10px;
+        height: 10px;
+    }
+    .aboutcoder{
+        position: relative;
+        top: 50px;
+    }
+    #ss{
+        margin-left: 30px;
+    }
+}
